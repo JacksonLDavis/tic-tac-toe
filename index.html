@@ -1,0 +1,60 @@
+<!--
+Code written by Jackson L. Davis
+-->
+
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tic-Tac-Toe</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="playerInfo">
+        <p>Try to get three X's or O's in a row.</p>
+        <p>If there is a tie, the player who goes first switches.</p>
+        <p>If there is a winner, the loser starts the next game.</p>
+        <div id="playerX">
+            <label for="playerX">X: </label>
+            <input type="radio" id="humanX" name="playerX" value="Human" checked="true">
+            <label for="humanX">Human</label>
+            <input type="radio" id="cpuX" name="playerX" value="CPU">
+            <label for="cpuX">CPU</label>
+        </div>
+        <div id="playerO">
+            <label for="playerO">O: </label>
+            <input type="radio" id="humanO" name="playerO" value="Human" checked="true">
+            <label for="humanO">Human</label>
+            <input type="radio" id="cpuO" name="playerO" value="CPU">
+            <label for="cpuO">CPU</label>
+        </div>
+        <button type="button" id="playButton" onclick="play()">Play</button>
+    </div>
+
+    <div id="game">
+        <p id="turn">X's turn</p>
+        <!-- rows are ABC, columns are 123 -->
+        <div id="board">
+            <button type="button" class="cell" id="A1" onclick="place(id)"></button>
+            <button type="button" class="cell" id="A2" onclick="place(id)"></button>
+            <button type="button" class="cell" id="A3" onclick="place(id)"></button>
+            <button type="button" class="cell" id="B1" onclick="place(id)"></button>
+            <button type="button" class="cell" id="B2" onclick="place(id)"></button>
+            <button type="button" class="cell" id="B3" onclick="place(id)"></button>
+            <button type="button" class="cell" id="C1" onclick="place(id)"></button>
+            <button type="button" class="cell" id="C2" onclick="place(id)"></button>
+            <button type="button" class="cell" id="C3" onclick="place(id)"></button>
+        </div>
+        <p id="winner"></p>
+        <button type="button" id="resetButton" onclick="reset()">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
